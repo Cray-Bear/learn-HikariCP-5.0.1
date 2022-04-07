@@ -53,7 +53,7 @@ abstract class PoolBase
    private final Logger logger = LoggerFactory.getLogger(PoolBase.class);
 
    public final HikariConfig config;
-   IMetricsTrackerDelegate metricsTracker;
+//   IMetricsTrackerDelegate metricsTracker;
 
    protected final String poolName;
 
@@ -378,9 +378,9 @@ abstract class PoolBase
       }
       finally {
          // tracker will be null during failFast check
-         if (metricsTracker != null) {
-            metricsTracker.recordConnectionCreated(elapsedMillis(start));
-         }
+//         if (metricsTracker != null) {
+//            metricsTracker.recordConnectionCreated(elapsedMillis(start));
+//         }
       }
    }
 
